@@ -23,7 +23,7 @@ on:
 
 jobs:
   build-maven-data-share:
-    uses: mosip/kattu/.github/workflows/maven-build.yml@master-java21
+    uses: mosip/kattu/.github/workflows/maven-build.yml@master-java2
     with:
       SERVICE_LOCATION: ./
       BUILD_ARTIFACT: data-share
@@ -59,7 +59,7 @@ jobs:
             SQUASH_LAYERS: '11'
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
-    uses: mosip/kattu/.github/workflows/docker-build.yml@master-java21
+    uses: mosip/kattu/.github/workflows/docker-build.yml@develop
     with:
       SERVICE_LOCATION: ${{ matrix.SERVICE_LOCATION }}
       SERVICE_NAME: ${{ matrix.SERVICE_NAME }}
