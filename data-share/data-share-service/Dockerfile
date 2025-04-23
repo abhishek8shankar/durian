@@ -41,6 +41,11 @@ ENV artifactory_url_env=${artifactory_url}
 # environment variable to pass iam_adapter url, at docker runtime
 ENV iam_adapter_url_env=${iam_adapter_url}
 
+ENV container_user=${container_user}
+ENV container_user_group=${container_user_group}
+ENV container_user_uid=${container_user_uid}
+ENV container_user_gid=${container_user_gid}
+
 # can be passed during Docker build as build time environment for github branch to pickup configuration from.
 ARG container_user=mosip
 
